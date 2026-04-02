@@ -13,6 +13,62 @@
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 72 72%22><text y=%22.9em%22 font-size=%2260%22>🎂</text></svg>"
     />
     <link rel="stylesheet" href="./style/style.css" />
+    <style>
+  /* Umumiy konteynerni markazlashtirish */
+  .wish-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .wish {
+    width: 100%;
+    max-width: 400px; /* Mobil ekran uchun optimal kenglik */
+    margin: 0 auto;
+  }
+
+  /* Sarlavha stili */
+  .wish-hbd {
+    font-family: 'Dancing Script', cursive; /* O'zingiz xohlagan font */
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #333;
+    line-height: 1.2;
+  }
+
+  /* ISMNI BO'LINISHIDAN SAQLASH (ENG MUHIM QISMI) */
+  .no-split {
+    white-space: nowrap; /* Matnni pastga tushib ketishiga yo'l qo'ymaydi */
+    display: inline-block;
+  }
+
+  /* Pastki tabrik matni stili */
+  .wish-message {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    font-weight: 400;
+    max-width: 300px; /* Mobil telefonda matn juda yoyilib ketmasligi uchun */
+    margin: 0 auto;
+  }
+
+  /* Mobil qurilmalar uchun (Ekran 480px dan kichik bo'lsa) */
+  @media (max-width: 480px) {
+    .wish-hbd {
+      font-size: 1.8rem; /* Shrifni biroz kichraytiramiz, ism sig'ishi uchun */
+    }
+    .wish-message {
+      font-size: 1rem;
+      max-width: 260px;
+    }
+  }
+</style>
+
   </head>
   <body>
     <!-- Preloader -->
@@ -98,12 +154,12 @@
           id="profilePic"
         />
         <div class="wish">
-          <h3 class="wish-hbd">Happy Birthday   Sevinchim!</h3>
-          <h5>
-            May this year bring you endless joy and beautiful memories! 🌟
-          </h5>
-        </div>
-      </div>
+  <h3 class="wish-hbd">Happy Birthday <span class="no-break">Sevinchim!</span></h3>
+  <h5 class="wish-text">
+    May this year bring you endless joy and beautiful memories! 🌟
+  </h5>
+</div>
+
 
       <div class="section-cake">
         <h2 class="cake-title">Now... Make Your Wish! 🌟</h2>
@@ -151,4 +207,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="./script/index.js"></script>
   </body>
-</html>  
+</html> 
