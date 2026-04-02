@@ -14,6 +14,56 @@
     />
     <link rel="stylesheet" href="./style/style.css" />
     <style>
+        /* 1. Birinchi chiqadigan kartalarni (Card Overlay) markazlashtirish */
+  .card-overlay {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+  }
+
+  .birthday-card {
+    position: relative; /* Absolute bo'lsa markazdan qochadi */
+    margin: 0 auto;
+    transform-style: preserve-3d;
+  }
+
+  /* 2. Karnay (Music Control) belgisini pastga va o'ng burchakka tushirish */
+  .music-control {
+    position: fixed !important;
+    bottom: 20px !important; /* Pastdan masofa */
+    right: 20px !important;  /* O'ngdan masofa */
+    top: auto !important;    /* Tepadan yopishib qolgan bo'lsa bekor qiladi */
+    left: auto !important;
+    z-index: 2000;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+  }
+
+  /* Mobil qurilmalar uchun qo'shimcha qulaylik */
+  @media (max-width: 480px) {
+    .birthday-card {
+      width: 85vw !important; /* Mobil ekranda karta sig'ishi uchun */
+      max-width: 320px;
+    }
+    .music-control {
+      bottom: 15px !important;
+      right: 15px !important;
+    }
+  }
   /* Umumiy konteynerni markazlashtirish */
   .wish-container {
     display: flex;
